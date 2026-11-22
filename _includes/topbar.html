@@ -1,0 +1,9 @@
+<header class="topbar">
+  <a class="logo" href="{{ '/' | relative_url }}" aria-label="Arinjay Business Systems, home">{% include logo.html %}</a>
+  <nav class="nav" aria-label="Main">
+    <a href="{{ '/#work' | relative_url }}">Projects</a>
+    <a href="{{ '/#how' | relative_url }}">Process</a>
+    {% if site.posts.size > 0 %}<a href="{{ '/redlines/' | relative_url }}">Redlines</a>{% endif %}
+    <a class="btn btn--line" href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">Book a free call</a>
+  </nav>
+</header>

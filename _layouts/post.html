@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<div class="grid-blue on-blue">
+  <div class="wrap">
+    {% include topbar.html %}
+    <div class="band">
+      <p class="label"><a href="{{ '/redlines/' | relative_url }}" style="color: inherit">REDLINES</a></p>
+      <h1 style="margin-top: 14px">{{ page.title }}</h1>
+      {% if page.description %}<p class="band__lede">{{ page.description }}</p>{% endif %}
+      {% assign words = content | strip_html | number_of_words %}{% assign minutes = words | divided_by: 200 | plus: 1 %}
+      <p class="band__meta">{{ page.date | date: "%-d %B %Y" }} · {{ minutes }} min read · Arinjay Khadke</p>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="grid-paper">
+  <article class="post">
+    <div class="post__body">
+      {{ content }}
+    </div>
+    <aside class="post__cta">
+      <h2>Got a problem worth solving?</h2>
+      <p>Tell me in two lines what’s stuck. The first call is free and takes 15 minutes.</p>
+      <a class="btn btn--red" href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">{% include wa-icon.html %}Book a free 15-minute call</a>
+    </aside>
+  </article>
+</main>

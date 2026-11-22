@@ -1,0 +1,16 @@
+<footer class="footer">
+  <div class="wrap">
+    <div class="titleblock">
+      <div class="titleblock__brand"><a class="logo" href="{{ '/' | relative_url }}" aria-label="Back to the homepage">{% include logo.html %}</a></div>
+      <div class="titleblock__cells">
+        <div><p class="k">DRAWN BY</p><p class="v">Arinjay Khadke</p></div>
+        <div><p class="k">BASED IN</p><p class="v">Nagpur, India</p></div>
+        <div><p class="k">WORKS WITH</p><p class="v">India, the Gulf, Europe and Southern Africa</p></div>
+        <div><p class="k">EMAIL</p><p class="v"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p></div>
+        <div><p class="k">WHATSAPP</p><p class="v"><a href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">{{ site.whatsapp_display }}</a></p></div>
+        <div><p class="k">ELSEWHERE</p><p class="v"><a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% if site.posts.size > 0 %} · <a href="{{ '/redlines/' | relative_url }}">Redlines</a>{% endif %}</p></div>
+      </div>
+    </div>
+    <p class="fineprint">This site uses no cookies and collects no personal data. Anything you send by WhatsApp or email is used only to reply to you. © {{ site.time | date: "%Y" }} Arinjay Business Systems, Nagpur.</p>
+  </div>
+</footer>

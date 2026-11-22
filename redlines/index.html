@@ -1,0 +1,33 @@
+---
+layout: default
+title: Redlines
+description: Short notes on fixing how businesses work, by Arinjay Khadke, a business consultant in Nagpur.
+---
+<div class="grid-blue on-blue">
+  <div class="wrap">
+    {% include topbar.html %}
+    <div class="band">
+      <h1>Redlines</h1>
+      <p class="band__lede">Short notes on fixing how businesses work.</p>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="sec grid-paper">
+  <div class="wrap">
+    {% if site.posts.size > 0 %}
+    <div class="notes" style="margin-top: 0">
+      {% for post in site.posts %}
+      <a class="note" href="{{ post.url | relative_url }}">
+        <p class="note__date">{{ post.date | date: "%-d %b %Y" | upcase }}</p>
+        <h2 style="font-size: 28px; line-height: 1.12; margin: 12px 0">{{ post.title }}</h2>
+        <p>{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | normalize_whitespace | truncate: 140 }}{% endif %}</p>
+        <span class="note__more">read it</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-note" style="margin-top: 0">The first notes are being drawn up. In the meantime, <a href="{{ site.whatsapp_url }}" target="_blank" rel="noopener">book a free 15-minute call</a>.</p>
+    {% endif %}
+  </div>
+</main>

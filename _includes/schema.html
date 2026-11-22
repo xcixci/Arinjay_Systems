@@ -1,0 +1,47 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ '/#business' | absolute_url }}",
+      "name": "Arinjay Business Systems",
+      "url": "{{ '/' | absolute_url }}",
+      "slogan": "Complex business problems, solved with practical tech and fresh thinking.",
+      "description": "Business consultant in Nagpur. Consultation, digital transformation and market entry between India and the Gulf, Europe and Southern Africa, plus websites, WhatsApp enquiry systems, simple CRMs, team training and visibility on Google and AI search.",
+      "email": "{{ site.email }}",
+      "telephone": "{{ site.whatsapp_display }}",
+      "image": "{{ '/assets/img/og-image.png' | absolute_url }}",
+      "address": { "@type": "PostalAddress", "addressLocality": "Nagpur", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+      "areaServed": ["Nagpur", "India", "United Arab Emirates", "Gulf Cooperation Council", "Europe", "Southern Africa", "South Africa", "Eswatini"],
+      "knowsAbout": ["Business consulting", "Digital transformation", "Market entry", "WhatsApp enquiry systems", "CRM", "AI for small businesses", "Answer engine optimisation"],
+      "founder": { "@id": "{{ '/#arinjay' | absolute_url }}" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ '/#arinjay' | absolute_url }}",
+      "name": "Arinjay Khadke",
+      "jobTitle": "Founder, Arinjay Business Systems",
+      {% if site.photo != "" %}"image": "{{ site.photo | absolute_url }}",
+      {% endif %}"url": "{{ '/#about' | absolute_url }}",
+      "sameAs": ["{{ site.linkedin }}"],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Cambridge, Judge Business School" },
+        { "@type": "CollegeOrUniversity", "name": "Wolfson College, University of Cambridge" },
+        { "@type": "CollegeOrUniversity", "name": "University of Exeter" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Who do you work with?", "acceptedAnswer": { "@type": "Answer", "text": "Owners and founders of growing businesses in India, the Gulf, Europe and Southern Africa: hotels and resorts, clinics, schools and coaching institutes, manufacturers, consultancies and startups." } },
+        { "@type": "Question", "name": "Is the first call really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fifteen minutes, no sales pitch. If your problem isn't one I can help with, I'll tell you, and point you to someone who can." } },
+        { "@type": "Question", "name": "What does it cost after that?", "acceptedAnswer": { "@type": "Answer", "text": "The working session has one fixed price. Any build is quoted at a fixed price before work starts, so there are no surprises." } },
+        { "@type": "Question", "name": "Do you do digital transformation?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, at the size growing businesses actually need: one working system at a time, not a two-year programme." } },
+        { "@type": "Question", "name": "Do you work in person?", "acceptedAnswer": { "@type": "Answer", "text": "In person in Nagpur, and online anywhere." } },
+        { "@type": "Question", "name": "Do you only advise, or do you also build?", "acceptedAnswer": { "@type": "Answer", "text": "Both. Some problems need a clear plan, some need a working system. I do either, or both." } }
+      ]
+    }
+  ]
+}
+</script>

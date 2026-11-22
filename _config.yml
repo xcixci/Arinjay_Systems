@@ -1,0 +1,41 @@
+title: Arinjay Business Systems
+tagline: Business consultant in Nagpur
+description: >-
+  Arinjay Khadke helps people and businesses in India, the Gulf, Europe and Southern Africa solve
+  complex business problems with practical tech and fresh thinking.
+  Book a free 15-minute call.
+# Until the domain moves, the site lives at xcixci.github.io/Arinjay_Systems.
+# On domain day: url -> https://arinjaysystems.com, baseurl -> "", and add the CNAME file back.
+url: https://xcixci.github.io
+baseurl: /Arinjay_Systems
+lang: en-IN
+timezone: Asia/Kolkata
+
+# Contact details used across the site
+email: systems@arinjay.email
+whatsapp_display: "+91 79720 28618"
+whatsapp_url: "https://wa.me/917972028618?text=Hi%20Arinjay%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20call.%20My%20problem%2C%20in%20two%20lines%3A%20"
+linkedin: https://www.linkedin.com/in/arinjaykhadke
+
+# Add your photo to assets/img/ and put its path here, e.g. /assets/img/arinjay.jpg
+photo: ""
+
+# Redlines (the blog): posts live in _posts/ as YYYY-MM-DD-title.md
+permalink: /redlines/:title/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+feed:
+  path: redlines/feed.xml
+
+exclude:
+  - README.md
+  - tools/
+  - preview/

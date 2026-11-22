@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "url": "{{ page.url | absolute_url }}",
+  "image": "{{ '/assets/img/og-image.png' | absolute_url }}",
+  "author": { "@type": "Person", "name": "Arinjay Khadke", "url": "{{ '/#about' | absolute_url }}" },
+  "publisher": { "@type": "Organization", "name": "Arinjay Business Systems", "url": "{{ '/' | absolute_url }}" },
+  "isPartOf": { "@type": "Blog", "name": "Redlines", "url": "{{ '/redlines/' | absolute_url }}" }
+}
+</script>
